@@ -1,0 +1,30 @@
+README
+
+This app is created to upload a csv file and insert the information in mySql database
+
+The app was created using: nodejs, express, mysql & reactjs
+Installing those packages, and running the server and client code you can visualize the results
+
+The server is created using nodejs: npm install
+Ths server is running in port:3001
+
+The database is created using MySql, we use the follow commands to create tthe database and the table:
+installing command: sudo apt-get install mysql-server
+- create database csvdata
+- CREATE TABLE `data_table_test` (
+  `id` varchar(255) NOT NULL,
+  `column1` varchar(255) DEFAULT NULL,
+  `column2` varchar(255) DEFAULT NULL,
+  `column3` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8
+
+The client is created using reactjs;
+The client port is running in port 9000;
+
+The server is connected to the database, and has POST and GET methods,we use the POST method to insert the file information throw Multer module, and using parse,
+the app receive the csv and insert the information in the database using POST method.
+
+The server is connected to the database and execute a query to insert the informaction in csvfile.
+
+The front end has a button to upload and submit the file, sends the file to the server using Axios Library, and the server insert this data into the table.
